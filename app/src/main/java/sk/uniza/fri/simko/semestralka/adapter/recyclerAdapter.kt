@@ -10,6 +10,16 @@ import kotlinx.android.synthetic.main.recycler_item.view.*
 import sk.uniza.fri.simko.semestralka.R
 import sk.uniza.fri.simko.semestralka.database.Score
 
+/**
+ * Recycler adapter
+ *
+ * Trieda ktora sa stara o zobrazenie jednotlivych itemov v recycler view.
+ *
+ * @property context
+ * @property scores
+ * @property gameID
+ * @constructor Create empty Recycler adapter
+ */
 class recyclerAdapter(private val context: Context, private val scores: List<Score>, private var gameID: Int = 0) : RecyclerView.Adapter<recyclerAdapter.ScoreViewHolder>() {
 
     class ScoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

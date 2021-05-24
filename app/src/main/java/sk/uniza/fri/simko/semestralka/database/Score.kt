@@ -4,6 +4,16 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Score
+ *
+ * Objekt predstavujuci zaznam v databaze.
+ *
+ * @property scoreID
+ * @property score
+ * @property category
+ * @constructor Create empty Score
+ */
 @Entity(tableName = "score_table")
 data class Score (
 
@@ -14,4 +24,4 @@ data class Score (
     @ColumnInfo
     var category : String = ""
 
-)//{constructor(score: Int, category: String) : this(0L, score, category)}
+)

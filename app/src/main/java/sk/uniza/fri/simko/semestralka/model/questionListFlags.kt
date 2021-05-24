@@ -2,6 +2,13 @@ package sk.uniza.fri.simko.semestralka.model
 
 import sk.uniza.fri.simko.semestralka.R
 
+/**
+ * Question list flags
+ *
+ * List otazok pre vlajky.
+ *
+ * @constructor Create empty Question list flags
+ */
 object questionListFlags: questionList(){
 
     override var map: HashMap<String, Int>? =  hashMapOf(
@@ -147,85 +154,26 @@ object questionListFlags: questionList(){
         "Nigéria" to R.drawable.flag_nigeria,
         "Nikaragua" to R.drawable.flag_nikaragua,
         "Nórsko" to R.drawable.flag_norsko
-        /*"Nový Zéland",
-        "Omán",
-        "Pakistan",
-        "Palau",
-        "Palestína",
-        "Panama",
-        "Panenské ostrovy USA",
-        "Panenské ostrovy VB",
-        "Papua-Nová Guinea",
-        "Paraguaj",
-        "Peru",
-        "Pobrežie Slonoviny",
-        "Poľsko",
-        "Portoriko",
-        "Portugalsko",
-        "Rakúsko",
-        "Réunion",
-        "Rovníková Guinea",
-        "Rumunsko",
-        "Rusko",
-        "Rwanda",
-        "Šalamúnove ostrovy",
-        "Salvádor",
-        "Samoa",
-        "San Maríno",
-        "Saudská Arábia",
-        "Senegal",
-        "Seychely",
-        "Sierra Leone",
-        "Singapur",
-        "Slovensko",
-        "Slovinsko",
-        "Somálsko",
-        "Španielsko",
-        "Spojené arabské emiráty" to R.drawable.flag_emiraty,
-        "Spojené štáty",
-        "Srbsko",
-        "Srí Lanka",
-        "Stredoafrická republika",
-        "Sudán",
-        "Surinam",
-        "Švajčiarsko",
-        "Svätá Lucia",
-        "Svätý Krištof a Nevis",
-        "Svätý Tomáš a Princov ostrov",
-        "Svätý Vincent a Grenadíny",
-        "Svazijsko",
-        "Švédsko",
-        "Sýria",
-        "Tadžikistan",
-        "Taiwan",
-        "Taliansko",
-        "Tanzánia",
-        "Thajsko",
-        "Togo",
-        "Tonga",
-        "Trinidad a Tobago",
-        "Tunisko",
-        "Turecko",
-        "Turkménsko",
-        "Tuvalu",
-        "Uganda",
-        "Ukrajina",
-        "Uruguaj",
-        "Uzbekistan",
-        "Vanuatu",
-        "Vatikán",
-        "Veľká Británia",
-        "Venezuela",
-        "Vietnam",
-        "Východný Timor",
-        "Zambia",
-        "Zimbabwe"*/
     )
 
+    /**
+     * Get flag questions
+     *
+     * Vrati list otazok vlajok.
+     *
+     * @return
+     */
     fun getFlagQuestions(): ArrayList<question>{
         return super.getQuestionList("Ktorej krajine patrí táto vlajka?")
     }
 
+    /**
+     * Get random flag question
+     *
+     * Vrati nahodnu otazku z listu vlajok.
+     *
+     * @return
+     */
     fun getRandomFlagQuestion(): question {
         return super.randomQuestion("Ktorej krajine patrí táto vlajka?")
     }

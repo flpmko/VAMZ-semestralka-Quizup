@@ -2,6 +2,13 @@ package sk.uniza.fri.simko.semestralka.model
 
 import sk.uniza.fri.simko.semestralka.R
 
+/**
+ * Question list cars
+ *
+ * List otazok pre auta.
+ *
+ * @constructor Create empty Question list cars
+ */
 object questionListCars: questionList(){
 
     override var map: HashMap<String, Int>? =  hashMapOf(
@@ -53,10 +60,24 @@ object questionListCars: questionList(){
         "Porshe" to R.drawable.car_porshe
     )
 
+    /**
+     * Get car questions
+     *
+     * Vrati list otazok aut.
+     *
+     * @return
+     */
     fun getCarQuestions(): ArrayList<question>{
         return super.getQuestionList("Značka ktorého auta je na obrázku?")
     }
 
+    /**
+     * Get random car question
+     *
+     * Vrati nahodnu otazku z listu aut.
+     *
+     * @return
+     */
     fun getRandomCarQuestion(): question {
         return super.randomQuestion("Značka ktorého auta je na obrázku?")
     }

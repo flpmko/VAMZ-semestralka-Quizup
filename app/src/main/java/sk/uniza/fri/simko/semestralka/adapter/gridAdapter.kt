@@ -9,6 +9,15 @@ import android.widget.TextView
 import sk.uniza.fri.simko.semestralka.R
 import sk.uniza.fri.simko.semestralka.model.gridItem
 
+/**
+ * Grid adapter
+ *
+ * Trieda ktora sa stara o zobrazenie jednotlivych itemov v grid view.
+ *
+ * @property context
+ * @property arrayList
+ * @constructor Create empty Grid adapter
+ */
 class gridAdapter(var context: Context, var arrayList: ArrayList<gridItem>): BaseAdapter() {
 
     override fun getItem(p0: Int): Any {

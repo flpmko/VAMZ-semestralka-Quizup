@@ -36,6 +36,12 @@ class QuickDeathActivity : AppCompatActivity(), View.OnClickListener {
         btn_submit_qd.setOnClickListener(this)
     }
 
+    /**
+     * Set question
+     *
+     * Nastavi nahodnu otazku.
+     * Jednotlive udaje otazky priradi konkretnym UI elementom, ktor ich maju zobrazit.
+     */
     private fun setQuestion(){
         val num = Random.nextInt(1,4)
         when(num) {
@@ -55,6 +61,12 @@ class QuickDeathActivity : AppCompatActivity(), View.OnClickListener {
         txt_option_4_qd.text = aQuestion!!.answer4
     }
 
+    /**
+     * Default option view
+     *
+     * Nastavi otazke defaulne zobrazenie, ktore sa ukazuje ked sa otazka
+     * prvy krat zobrazi
+     */
     private fun defaultOptionView(){
         val options = ArrayList<TextView>()
         options.add(0, txt_option_1_qd)
@@ -69,6 +81,15 @@ class QuickDeathActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Selected option view
+     *
+     * Nastavi otazke zobrazenie, ked je zvolena moznost.
+     * Zvolenu moznost zvyrazni.
+     *
+     * @param txt
+     * @param selectedOption
+     */
     private fun selectedOptionView(txt: TextView, selectedOption: Int){
         defaultOptionView()
         aSelectedOptionId = selectedOption
@@ -77,6 +98,14 @@ class QuickDeathActivity : AppCompatActivity(), View.OnClickListener {
         txt.background = ContextCompat.getDrawable(this, R.drawable.option_selected)
     }
 
+    /**
+     * Answer view
+     *
+     *Nastavi moznosti dizajn odpovede.
+     *
+     * @param answer
+     * @param drawableView
+     */
     private fun answerView(answer: Int, drawableView: Int){
         when(answer){
             1 -> {

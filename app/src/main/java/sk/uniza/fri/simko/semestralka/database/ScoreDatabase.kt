@@ -5,6 +5,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
+/**
+ * Score database
+ *
+ * @constructor Create empty Score database
+ */
 @Database(entities = [Score::class], version = 1, exportSchema = false)
 public abstract class ScoreDatabase : RoomDatabase() {
 

@@ -37,6 +37,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         btn_submit.setOnClickListener(this)
     }
 
+    /**
+     * Set category
+     *
+     * Na zaklade kategorie zvolenej v menu priradi atributu aQuestionList, ktory uchovava
+     * vsetky otazky, spravny list otazok danej kategorie.
+     */
     private fun setCategory(){
 
         aCategory = intent.getStringExtra(constants.CATEGORY).toString()
@@ -51,6 +57,13 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Set question
+     *
+     * Nastavi otazku.
+     * Jednotlive udaje otazky priradi konkretnym UI elementom, ktor ich maju zobrazit.
+     * Taktiez sa updatuje progress bar a kontroluje sa ci sa nachadza na poslednej otazke.
+     */
     private fun setQuestion(){
         val question = aQuestionsList!![aCurrentPosition - 1]
 
@@ -73,6 +86,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         txt_option_4.text = question.answer4
     }
 
+    /**
+     * Create shuffle list
+     *
+     * Vytvori list s otazkami zo vsetkych kategorii.
+     * Vola sa iba ked je v menu zvolena kategoria "mis-mas".
+     */
     private fun createShuffleList(){
         var list = ArrayList<question>()
         var list1 = questionListFlags.getFlagQuestions()
@@ -135,6 +154,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         aQuestionsList = list
     }
 
+    /**
+     * Default option view
+     *
+     * Nastavi otazke defaulne zobrazenie, ktore sa ukazuje ked sa otazka
+     * prvy krat zobrazi
+     */
     private fun defaultOptionView(){
         val options = ArrayList<TextView>()
         options.add(0, txt_option_1)
@@ -149,6 +174,15 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Selected option view
+     *
+     * Nastavi otazke zobrazenie, ked je zvolena moznost.
+     * Zvolenu moznost zvyrazni.
+     *
+     * @param txt
+     * @param selectedOption
+     */
     private fun selectedOptionView(txt: TextView, selectedOption: Int){
         defaultOptionView()
         aSelectedOptionId = selectedOption
@@ -157,6 +191,14 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         txt.background = ContextCompat.getDrawable(this, R.drawable.option_selected)
     }
 
+    /**
+     * Answer view
+     *
+     * Nastavi moznosti dizajn odpovede.
+     *
+     * @param answer
+     * @param drawableView
+     */
     private fun answerView(answer: Int, drawableView: Int){
         when(answer){
             1 -> {

@@ -2,6 +2,13 @@ package sk.uniza.fri.simko.semestralka.model
 
 import sk.uniza.fri.simko.semestralka.R
 
+/**
+ * Question list brands
+ *
+ * List otazok pre loga.
+ *
+ * @constructor Create empty Question list brands
+ */
 object questionListBrands: questionList(){
 
     override var map: HashMap<String, Int>? =  hashMapOf(
@@ -52,10 +59,24 @@ object questionListBrands: questionList(){
         "Wutang" to R.drawable.brand_wutang,
     )
 
+    /**
+     * Get brand questions
+     *
+     * Vrati list otazok znaciek.
+     *
+     * @return
+     */
     fun getBrandQuestions(): ArrayList<question>{
         return super.getQuestionList("Ktorej spoločnosti patrí toto logo?")
     }
 
+    /**
+     * Get random brand question
+     *
+     * Vrati nahodnu otazku z listu.
+     *
+     * @return
+     */
     fun getRandomBrandQuestion(): question {
         return super.randomQuestion("Ktorej spoločnosti patrí toto logo?")
     }

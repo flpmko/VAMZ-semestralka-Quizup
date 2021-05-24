@@ -54,6 +54,10 @@ class ResultActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Finish
+     * Pri ukonceni naloaduje udaje do databazy.
+     */
     override fun finish() {
         val thread = Thread {
             var db = ScoreDatabase.getInstance(this.applicationContext)
@@ -70,6 +74,13 @@ class ResultActivity : AppCompatActivity() {
         super.finish()
     }
 
+    /**
+     * Feedback
+     * Na zaklade poctu spravnych odpovedi uzivatelovi
+     * zobrazi spatnu vazbu.
+     *
+     * @param num_correct
+     */
     fun feedback(num_correct : Int) {
         when(num_correct){
             0 -> txt_congrats.text = "To sa ti ako podarilo?!"

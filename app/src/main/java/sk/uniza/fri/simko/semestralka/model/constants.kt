@@ -1,5 +1,12 @@
 package sk.uniza.fri.simko.semestralka.model
 
+/**
+ * Constants
+ *
+ * Konstanty. ktore pouzivam v aplikacii a potrebujem aby sa nemenili.
+ *
+ * @constructor Create empty Constants
+ */
 object constants{
 
     const val TOTAL_QUESTIONS: String = "total_questions"

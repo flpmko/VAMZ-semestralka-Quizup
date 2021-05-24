@@ -32,6 +32,9 @@ class Menu : AppCompatActivity(), AdapterView.OnItemClickListener {
         gridView?.onItemClickListener = this
     }
 
+    /**
+     * Metoda na naplnenie Arraylistu gridItemami,ktore predstavuju jednotlive prvky v menu
+     */
     private fun fillList(): ArrayList<gridItem> {
         var arrayList: ArrayList<gridItem> = ArrayList()
 

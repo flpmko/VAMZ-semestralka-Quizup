@@ -2,6 +2,13 @@ package sk.uniza.fri.simko.semestralka.model
 
 import sk.uniza.fri.simko.semestralka.R
 
+/**
+ * Question list signs
+ *
+ * List otazok pre znacky.
+ *
+ * @constructor Create empty Question list signs
+ */
 object questionListSigns: questionList(){
 
     override var map: HashMap<String, Int>? =  hashMapOf(
@@ -66,10 +73,24 @@ object questionListSigns: questionList(){
         "Hlavná cesta" to R.drawable.sign_hlavna
     )
 
+    /**
+     * Get sign questions
+     *
+     * Vrati list otazok znaciek.
+     *
+     * @return
+     */
     fun getSignQuestions(): ArrayList<question> {
         return super.getQuestionList("Čo znamená táto dopravná značka?")
     }
 
+    /**
+     * Get random sign question
+     *
+     * Vrati nahodnu otazku z listu znaciek.
+     *
+     * @return
+     */
     fun getRandomSignQuestion(): question {
         return super.randomQuestion("Čo znamená táto dopravná značka?")
     }

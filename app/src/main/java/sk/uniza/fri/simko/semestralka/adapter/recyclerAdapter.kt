@@ -16,7 +16,6 @@ class recyclerAdapter(private val context: Context, private val scores: List<Sco
 
         var gameID: TextView = itemView.txt_game_id
         var category: TextView = itemView.txt_category
-        var maxAnswers: TextView = itemView.txt_max_answers
         var correctAnswers: TextView = itemView.txt_correct_answers
 
         fun nastavHodnoty(score: Score, gameID: Int) {

@@ -1,0 +1,203 @@
+{\rtf1\ansi\ansicpg1250\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22720\viewh20680\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 private val signs =  
+\f1\i \cf2 \cb3 listOf
+\f0\i0 \cf2 \cb3 <String>(\
+    "Nebezpe\uc0\u269 enstvo",\
+    "Z\'e1kruta",\
+    "Dvojit\'e1 z\'e1kruta",\
+    "Klesanie",\
+    "St\'fapanie",\
+    "Z\'fa\'9een\'e1 vozovka",\
+    "Nerovnos\uc0\u357  vozovky",\
+    "Nebezpe\uc0\u269 n\'e1 krajnica",\
+    "Nebezpe\uc0\u269 enstvo \'9amyku",\
+    "Sneh alebo po\uc0\u318 adovica",\
+    "\'8atrk na vozovke",\
+    "Padaj\'face kamene",\
+    "Bo\uc0\u269 n\'fd vietor",\
+    "Kol\'f3ny",\
+    "Pr\'e1ca",\
+    "Obojsmern\'e1 prem\'e1vka",\
+    "Sveteln\'e9 sign\'e1ly",\
+    "Kri\'9eovatka",\
+    "Chodci",\
+    "Deti",\
+    "Priechod pre chodcov",\
+    "Cyklisti",\
+    "Zver",\
+    "Priecestie",\
+    "N\'e1ves\uc0\u357  pred priecest\'edm",\
+    "V\'fdstra\'9en\'fd kr\'ed\'9e",\
+    "Daj prednos\uc0\u357  v jazde",\
+    "Stoj, daj prednos\uc0\u357  v jazde",\
+    "Prednos\uc0\u357  protiid\'facich vozidiel",\
+    "Prik\'e1zan\'fd smer jazdy",\
+    "Prik\'e1zan\'fd smer odbo\uc0\u269 enia",\
+    "Prik\'e1zan\'fd smer obch\'e1dzania",\
+    "Kruhov\'fd objazd",\
+    "Z\'e1kaz odbo\uc0\u269 enia",\
+    "Z\'e1kaz ot\'e1\uc0\u269 ania",\
+    "Cesti\uc0\u269 ka pre chodcov",\
+    "Cyklistick\'e1 komunik\'e1cia",\
+    "Vyhraden\'fd pruh pre verejn\'fd dopravu",\
+    "Z\'e1kaz vjazdu",\
+    "Z\'e1kaz vjazdu pre v\'9aetky vozidl\'e1",\
+    "Z\'e1kaz vjazdu pre v\'9aetky motorov\'e9 vozidl\'e1",\
+    "Z\'e1kaz vjazdu pre vozidl\'e1 prepravuj\'face nebezpe\uc0\u269 n\'e9 veci",\
+    "Z\'e1kaz vjazdu pre vozidl\'e1 prepravuj\'face n\'e1klad, ktor\'fd m\'f4\'9ee sp\'f4sobi\uc0\u357  zne\u269 istenie vody",\
+    "Maxim\'e1lna hmotnos\uc0\u357 ",\
+    "Maxim\'e1lna \'9a\'edrka",\
+    "Maxim\'e1lna v\'fd\'9aka",\
+    "Maxim\'e1lna d\uc0\u314 \'9eka",\
+    "Najni\'9e\'9aia dovolen\'e1 r\'fdchlos\uc0\u357 ",\
+    "Snehov\'e9 re\uc0\u357 aze",\
+    "Najvy\'9a\'9aia dovolen\'e1 r\'fdchlos\uc0\u357 ",\
+    "Z\'e1kaz predch\'e1dzania",\
+    "Minim\'e1lna vzdialenos\uc0\u357  medzi vozidlami",\
+    "Koniec najvy\'9a\'9aej dovolenej r\'fdchlosti",\
+    "Z\'f3na najvy\'9a\'9aej dovolenej r\'fdchlosti",\
+    "Z\'e1kaz zastavenia",\
+    "Z\'e1kaz st\'e1tia",\
+    "Parkovanie",\
+    "Hlavn\'e1 cesta"\
+)\
+\
+\
+\
+img = map[optionList[idCorrect - 1]]!!\
+val question1 = question(\
+    1,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    img,\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    optionList[3],\
+    idCorrect\
+)\
+questionList.add(question1)*/\
+\
+\
+/*optionList = randomOption()\
+val question2 = question(\
+    2,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_dvojita_zakruta,\
+    optionList[0],\
+    optionList[1],\
+    "Pozor dvojit\'e1 z\'e1kruta",\
+    optionList[2],\
+    3\
+)\
+questionList.add(question2)\
+\
+optionList = randomOption()\
+val question3 = question(\
+    3,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_koniec_zakazu,\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    "Koniec z\'e1kazu",\
+    4\
+)\
+questionList.add(question3)\
+\
+optionList = randomOption()\
+val question4 = question(\
+    4,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_prednost,\
+    "Daj prednos\uc0\u357  v jazde",\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    1\
+)\
+questionList.add(question4)\
+\
+optionList = randomOption()\
+val question5 = question(\
+    5,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_stupanie,\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    "St\'fapanie",\
+    4\
+)\
+questionList.add(question5)\
+\
+optionList = randomOption()\
+val question6 = question(\
+    6,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_semafor,\
+    optionList[0],\
+    "Sveteln\'e1 signaliz\'e1cia",\
+    optionList[1],\
+    optionList[2],\
+    2\
+)\
+questionList.add(question6)\
+\
+optionList = randomOption()\
+val question7 = question(\
+    7,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_max_rychlost,\
+    optionList[0],\
+    optionList[1],\
+    "Maxim\'e1lna povolen\'e1 r\'fdchlos\uc0\u357 ",\
+    optionList[2],\
+    3\
+)\
+questionList.add(question7)\
+\
+optionList = randomOption()\
+val question8 = question(\
+    8,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_nerovnost,\
+    "Pozor, nerovnos\uc0\u357  na vozovke",\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    1\
+)\
+questionList.add(question8)\
+\
+optionList = randomOption()\
+val question9 = question(\
+    9,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_cyklisti,\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    "Chodn\'edk pre cyklistov",\
+    4\
+)\
+questionList.add(question9)\
+\
+optionList = randomOption()\
+val question10 = question(\
+    10,\
+    "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+    R.drawable.sign_pozor_krizovatka,\
+    "Kri\'9eovatka",\
+    optionList[0],\
+    optionList[1],\
+    optionList[2],\
+    1\
+)\
+questionList.add(question10)\
+}

@@ -1,0 +1,381 @@
+{\rtf1\ansi\ansicpg1250\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22720\viewh20680\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 package sk.uniza.fri.simko.semestralka.model\
+\
+import sk.uniza.fri.simko.semestralka.R\
+\
+object questionListSigns\{\
+\
+   Private var map: HashMap<String, Int> =  
+\f1\i \cf2 \cb3 hashMapOf
+\f0\i0 \cf2 \cb3 (\
+        "Nebezpe\uc0\u269 enstvo" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_nebezpecenstvo
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kruta" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakruta
+\f0\i0 \cf2 \cb3 ,\
+        "Dvojit\'e1 z\'e1kruta" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_dvojita_zakruta
+\f0\i0 \cf2 \cb3 ,\
+        "Klesanie" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_klesanie
+\f0\i0 \cf2 \cb3 ,\
+        "St\'fapanie" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_stupanie
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'fa\'9een\'e1 vozovka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zuzena_vozovka
+\f0\i0 \cf2 \cb3 ,\
+        "Nerovnos\uc0\u357  vozovky" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_nerovnost
+\f0\i0 \cf2 \cb3 ,\
+        "Nebezpe\uc0\u269 n\'e1 krajnica" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_krajnica
+\f0\i0 \cf2 \cb3 ,\
+        "Nebezpe\uc0\u269 enstvo \'9amyku" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_smyk
+\f0\i0 \cf2 \cb3 ,\
+        "Sneh alebo po\uc0\u318 adovica" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_sneh
+\f0\i0 \cf2 \cb3 ,\
+        "\'8atrk na vozovke" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_strk
+\f0\i0 \cf2 \cb3 ,\
+        "Padaj\'face kamene" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_kamene
+\f0\i0 \cf2 \cb3 ,\
+        "Bo\uc0\u269 n\'fd vietor" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_vietor
+\f0\i0 \cf2 \cb3 ,\
+        "Kol\'f3ny" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_kolony
+\f0\i0 \cf2 \cb3 ,\
+        "Pr\'e1ca" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_praca
+\f0\i0 \cf2 \cb3 ,\
+        "Obojsmern\'e1 prem\'e1vka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_obojsmer
+\f0\i0 \cf2 \cb3 ,\
+        "Sveteln\'e9 sign\'e1ly" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_semafor
+\f0\i0 \cf2 \cb3 ,\
+        "Kri\'9eovatka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_pozor_krizovatka
+\f0\i0 \cf2 \cb3 ,\
+        "Pozor, chodci!" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_pozor_chodci
+\f0\i0 \cf2 \cb3 ,\
+        "Pozor, cyklisti!" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_pozor_cyklisti
+\f0\i0 \cf2 \cb3 ,\
+        "Pozor, deti!" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_pozor_deti
+\f0\i0 \cf2 \cb3 ,\
+        "Pozor, prechod pre chodcov!" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_pozor_prechod
+\f0\i0 \cf2 \cb3 ,\
+        "Chodci" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_chodci
+\f0\i0 \cf2 \cb3 ,\
+        "Cyklisti" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_cyklisti
+\f0\i0 \cf2 \cb3 ,\
+        "Zver" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zver
+\f0\i0 \cf2 \cb3 ,\
+        "Priecestie" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_priecestie
+\f0\i0 \cf2 \cb3 ,\
+        "N\'e1ves\uc0\u357  pred priecest\'edm" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_priecestie_navest
+\f0\i0 \cf2 \cb3 ,\
+        "V\'fdstra\'9en\'fd kr\'ed\'9e" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_priecestie_kriz
+\f0\i0 \cf2 \cb3 ,\
+        "Daj prednos\uc0\u357  v jazde" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_prednost
+\f0\i0 \cf2 \cb3 ,\
+        "Stoj, daj prednos\uc0\u357  v jazde" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_stop
+\f0\i0 \cf2 \cb3 ,\
+        "Prednos\uc0\u357  protiid\'facich vozidiel" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_prednost_proti
+\f0\i0 \cf2 \cb3 ,\
+        "Prik\'e1zan\'fd smer jazdy" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_prikazany_smer_jazdy
+\f0\i0 \cf2 \cb3 ,\
+        "Prik\'e1zan\'fd smer odbo\uc0\u269 enia" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_prikazany_smer_odbocenia
+\f0\i0 \cf2 \cb3 ,\
+        "Prik\'e1zan\'fd smer obch\'e1dzania" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_prikazany_smer_obchadzania
+\f0\i0 \cf2 \cb3 ,\
+        "Kruhov\'fd objazd" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_kruhac
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz odbo\uc0\u269 enia" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_odbocenia
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz ot\'e1\uc0\u269 ania" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_otacania
+\f0\i0 \cf2 \cb3 ,\
+        "Vyhraden\'fd pruh pre verejn\'fd dopravu" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_mhd
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz vjazdu" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_vjazdu
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz vjazdu pre v\'9aetky vozidl\'e1" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_vjazdu_oboj
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz vjazdu pre v\'9aetky motorov\'e9 vozidl\'e1" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_vjazdu_motor
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz vjazdu pre vozidl\'e1 prepravuj\'face nebezpe\uc0\u269 n\'e9 veci" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_vjazdu_nebezpecne
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz vjazdu pre vozidl\'e1 prepravuj\'face n\'e1klad, ktor\'fd m\'f4\'9ee sp\'f4sobi\uc0\u357  zne\u269 istenie vody" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_vjazdu_znecistenie
+\f0\i0 \cf2 \cb3 ,\
+        "Maxim\'e1lna hmotnos\uc0\u357 " 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_max_hmotnost
+\f0\i0 \cf2 \cb3 ,\
+        "Maxim\'e1lna \'9a\'edrka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_max_sirka
+\f0\i0 \cf2 \cb3 ,\
+        "Maxim\'e1lna v\'fd\'9aka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_max_vyska
+\f0\i0 \cf2 \cb3 ,\
+        "Maxim\'e1lna d\uc0\u314 \'9eka" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_max_dlzka
+\f0\i0 \cf2 \cb3 ,\
+        "Najni\'9e\'9aia dovolen\'e1 r\'fdchlos\uc0\u357 " 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_min_rychlost
+\f0\i0 \cf2 \cb3 ,\
+        "Snehov\'e9 re\uc0\u357 aze" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_retaze
+\f0\i0 \cf2 \cb3 ,\
+        "Najvy\'9a\'9aia dovolen\'e1 r\'fdchlos\uc0\u357 " 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_max_rychlost
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz predch\'e1dzania" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_predchadzania
+\f0\i0 \cf2 \cb3 ,\
+        "Minim\'e1lna vzdialenos\uc0\u357  medzi vozidlami" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_min_vzdialenost
+\f0\i0 \cf2 \cb3 ,\
+        "Koniec najvy\'9a\'9aej dovolenej r\'fdchlosti" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_koniec_max_rychlost
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'f3na najvy\'9a\'9aej dovolenej r\'fdchlosti" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zona_max_rychlost
+\f0\i0 \cf2 \cb3 ,\
+        "Koniec viacer\'fdch z\'e1kazov" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_koniec_zakazov
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz zastavenia" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_zastavenia
+\f0\i0 \cf2 \cb3 ,\
+        "Z\'e1kaz st\'e1tia" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_zakaz_statia
+\f0\i0 \cf2 \cb3 ,\
+        "Parkovanie" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_parkovanie
+\f0\i0 \cf2 \cb3 ,\
+        "Hlavn\'e1 cesta" 
+\f1\i \cf2 \cb3 to 
+\f0\i0 \cf2 \cb3 R.drawable.
+\f1\i \cf2 \cb3 sign_hlavna\
+    
+\f0\i0 \cf2 \cb3 )\
+\
+    fun getSignQuestions(): ArrayList<question> \{\
+\
+        val questionList = ArrayList<question>()\
+        var img = 0\
+        var idCorrect = 0\
+        var optionList: ArrayList<String> = randomOption()\
+        val backupMap:HashMap<String, Int> = map.clone() as HashMap<String, Int>\
+\
+        for (i in 1..10) \{\
+            idCorrect = (1..4).random()\
+            optionList = randomOption()\
+            img = map[optionList[idCorrect - 1]]!!\
+            val question = question(\
+                i,\
+                "\uc0\u268 o znamen\'e1 t\'e1to dopravn\'e1 zna\u269 ka?",\
+                img,\
+                optionList[0],\
+                optionList[1],\
+                optionList[2],\
+                optionList[3],\
+                idCorrect\
+            )\
+            questionList.add(question)\
+\
+            //odstranit pridanu otazku z hashMap\
+            map.remove(optionList[idCorrect - 1])\
+        \}\
+\
+        this.map = backupMap\
+        return questionList\
+    \}\
+\
+    private fun randomOption(): ArrayList<String>\{\
+        val optionList = ArrayList<String>()\
+        var different = true\
+\
+        val option1: String = map.keys.random()\
+        var option2: String = map.keys.random()\
+        var option3: String = map.keys.random()\
+        var option4: String = map.keys.random()\
+\
+        while (different)\{\
+            if (option1 == option2)\{\
+                option2 = map.keys.random()\
+            \} else if (option1 == option3)\{\
+                option3 = map.keys.random()\
+            \} else if (option1 == option4) \{\
+                option4 = map.keys.random()\
+            \} else if (option2 == option3) \{\
+                option3 = map.keys.random()\
+            \} else if (option2 == option4) \{\
+                option4 = map.keys.random()\
+            \} else if (option3 == option4) \{\
+                option4 = map.keys.random()\
+            \} else \{\
+                different = false\
+            \}\
+        \}\
+\
+        optionList.add(option1)\
+        optionList.add(option2)\
+        optionList.add(option3)\
+        optionList.add(option4)\
+\
+        return optionList\
+    \}\
+\}\
+}

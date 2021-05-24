@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="7dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_grid_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_flag">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_grid_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vlajky statov"
+            android:layout_below="@+id/img_grid_item"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textSize="15sp">
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
